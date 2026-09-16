@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&family=Space+Grotesk:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Gothic A1", sans-serif;
+  background: #ffffff;
+  color: #15181f;
+}
+
+.vtb-num {
+  font-family: "Space Grotesk", "Gothic A1", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes vtb-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vtb-fade-in {
+  animation: vtb-fade-in 160ms ease-out;
+}
+
+@keyframes vtb-modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.vtb-modal-in {
+  animation: vtb-modal-in 180ms ease-out;
+}
+
+.vtb-insert-line {
+  transition: background-color 100ms ease;
+}
+
+.vtb-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
